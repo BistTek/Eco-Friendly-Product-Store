@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Eco-Friendly Products Store</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <div class="nav-menu">
+          <div class="logo">
+            <img src="images/logo.png" alt="GreenEarth Logo" />
+          </div>
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="calculator.html">Carbon Calculator</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-header animate-section">
+        <div class="container">
+          <h1>Contact Our Team</h1>
+          <p>We'd love to hear from you</p>
+        </div>
+      </section>
+
+      <section class="contact-section animate-section">
+        <div class="container">
+          <div class="contact-container">
+            <div class="contact-info">
+              <h2>Get In Touch</h2>
+              <p>
+                Have questions about our products or sustainability efforts?
+                Reach out to our team.
+              </p>
+
+              <div class="contact-method">
+                <h3>Email Us</h3>
+                <p>info@eco-friendlyproducts.com</p>
+              </div>
+
+              <div class="contact-method">
+                <h3>Call Us</h3>
+                <p>+61 4 2328 4378</p>
+                <p>Monday-Friday, 9am-5pm EST</p>
+              </div>
+
+              <div class="contact-method">
+                <h3>Visit Us</h3>
+                <p>
+                  Green Street<br />
+                  Eco City, EC 12345<br />
+                  Australia
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-form">
+              <form id="contact-form">
+                <div class="form-group">
+                  <label for="name">Your Name*</label>
+                  <input type="text" id="name" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email Address*</label>
+                  <input type="email" id="email" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="subject">Subject*</label>
+                  <select id="subject" required>
+                    <option value="">Select a topic</option>
+                    <option value="product">Product Question</option>
+                    <option value="order">Order Inquiry</option>
+                    <option value="sustainability">
+                      Sustainability Question
+                    </option>
+                    <option value="partnership">Partnership Opportunity</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Your Message*</label>
+                  <textarea id="message" rows="6" required></textarea>
+                </div>
+
+                <button type="submit" class="btn">Send Message</button>
+              </form>
+
+              <div id="form-status"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <img src="images/logo.png" alt="GreenEarth Logo" />
+            <p>Making sustainable living accessible to everyone</p>
+          </div>
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="calculator.html">Calculator</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Contact Us</h3>
+            <p>info@eco-friendlyproducts.com</p>
+            <p>+61 4 2328 4378</p>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2025 Eco-Friendly Product Store | All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+  </body>
+</html>

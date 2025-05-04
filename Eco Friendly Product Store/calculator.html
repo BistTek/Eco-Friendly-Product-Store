@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carbon Calculator | Eco-Friendly Products Store</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .products-button-container {
+        margin-top: 2rem;
+        text-align: center;
+      }
+      .products-button-container .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        font-size: 1.1rem;
+        background-color: #4caf50;
+        color: white;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+      }
+      .products-button-container .btn:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <div class="nav-menu">
+          <div class="logo">
+            <img src="images/logo.png" alt="GreenEarth Logo" width="150" />
+          </div>
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="calculator.html">Carbon Calculator</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-header animate-section">
+        <div class="container">
+          <h1>Carbon Footprint Calculator</h1>
+          <p>See how much you can reduce your environmental impact</p>
+        </div>
+      </section>
+
+      <section class="calculator-section animate-section">
+        <div class="container">
+          <div class="calculator-container">
+            <form id="carbon-calculator">
+              <div class="form-group">
+                <label for="product-type">Product Type:</label>
+                <select id="product-type" required>
+                  <option value="">Select a product</option>
+                  <option value="bamboo-toothbrush">Bamboo Toothbrush</option>
+                  <option value="reusable-bottle">Reusable Water Bottle</option>
+                  <option value="organic-cotton">Organic Cotton T-shirt</option>
+                  <option value="soap-bar">Natural Soap Bar</option>
+                  <option value="beeswax-wrap">Beeswax Food Wraps</option>
+                  <option value="bamboo-cutlery">Bamboo Cutlery Set</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="usage-frequency"
+                  >How many times per week do you use this product?</label
+                >
+                <input
+                  type="number"
+                  id="usage-frequency"
+                  min="1"
+                  placeholder="e.g., 7"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="duration"
+                  >How many months have you been using it (or plan to use
+                  it)?</label
+                >
+                <input
+                  type="number"
+                  id="duration"
+                  min="1"
+                  placeholder="e.g., 12"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="conventional"
+                  >What conventional product are you replacing?</label
+                >
+                <select id="conventional" required>
+                  <option value="">Select a product</option>
+                  <option value="plastic-toothbrush">Plastic Toothbrush</option>
+                  <option value="plastic-bottle">Plastic Water Bottle</option>
+                  <option value="regular-shirt">
+                    Conventional Cotton T-shirt
+                  </option>
+                  <option value="liquid-soap">
+                    Liquid Soap in Plastic Bottle
+                  </option>
+                  <option value="plastic-wrap">Plastic Food Wrap</option>
+                  <option value="plastic-cutlery">Plastic Cutlery Set</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn">Calculate Impact</button>
+            </form>
+
+            <div id="calculator-results" class="hidden">
+              <h2>Your Environmental Impact</h2>
+              <div class="result-card">
+                <h3>Carbon Savings</h3>
+                <p class="big-number"><span id="carbon-saved">0</span> kg</p>
+                <p>of CO2 emissions prevented</p>
+              </div>
+
+              <div class="result-card">
+                <h3>Equivalent To</h3>
+                <p class="big-number"><span id="trees-equivalent">0</span></p>
+                <p>tree seedlings grown for 10 years</p>
+              </div>
+
+              <div class="visualization">
+                <h3>Your Impact Visualization</h3>
+                <div class="carbon-bar-container">
+                  <div class="carbon-bar" id="carbon-visual"></div>
+                </div>
+                <div class="legend">
+                  <span>0 kg</span>
+                  <span id="max-co2">10 kg</span>
+                </div>
+              </div>
+
+              <div class="share-results">
+                <p>Share your results and inspire others!</p>
+                <div class="social-share">
+                  <button class="social-btn twitter">Twitter</button>
+                  <button class="social-btn facebook">Facebook</button>
+                  <button class="social-btn instagram">Instagram</button>
+                </div>
+              </div>
+
+              <div
+                class="products-button-container"
+                id="products-button-container"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <img src="images/logo.png" alt="GreenEarth Logo" width="120" />
+            <p>Making sustainable living accessible to everyone</p>
+          </div>
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="calculator.html">Calculator</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Contact Us</h3>
+            <p>info@eco-friendlyproducts.com</p>
+            <p>+61 4 2328 4378</p>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2025 Eco-Friendly Products Store | All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const carbonForm = document.getElementById("carbon-calculator");
+        if (!carbonForm) return;
+
+        const productData = {
+          "bamboo-toothbrush": {
+            name: "Bamboo Toothbrush",
+            savings: 0.005,
+            conventional: "plastic-toothbrush",
+          },
+          "reusable-bottle": {
+            name: "Reusable Water Bottle",
+            savings: 0.02,
+            conventional: "plastic-bottle",
+          },
+          "organic-cotton": {
+            name: "Organic Cotton T-shirt",
+            savings: 0.012,
+            conventional: "regular-shirt",
+          },
+          "soap-bar": {
+            name: "Natural Soap Bar",
+            savings: 0.003,
+            conventional: "liquid-soap",
+          },
+          "beeswax-wrap": {
+            name: "Beeswax Food Wraps",
+            savings: 0.008,
+            conventional: "plastic-wrap",
+          },
+          "bamboo-cutlery": {
+            name: "Bamboo Cutlery Set",
+            savings: 0.006,
+            conventional: "plastic-cutlery",
+          },
+        };
+
+        carbonForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          const productType = document.getElementById("product-type").value;
+          const frequency =
+            parseInt(document.getElementById("usage-frequency").value) || 0;
+          const duration =
+            parseInt(document.getElementById("duration").value) || 0;
+
+          if (productData[productType]) {
+            const weeks = duration * 4;
+            const uses = frequency * weeks;
+            const carbonSaved = uses * productData[productType].savings;
+            const treesEquivalent = Math.round(carbonSaved * 0.2);
+
+            document.getElementById("carbon-saved").textContent =
+              carbonSaved.toFixed(2);
+            document.getElementById("trees-equivalent").textContent =
+              treesEquivalent;
+            document.getElementById("max-co2").textContent = `${Math.ceil(
+              carbonSaved * 1.2
+            )} kg`;
+
+            const visual = document.getElementById("carbon-visual");
+            visual.style.width = `${Math.min(carbonSaved * 100, 100)}%`;
+
+            const productsContainer = document.getElementById(
+              "products-button-container"
+            );
+            productsContainer.innerHTML = `
+              <a href="products.html" class="btn">View All Eco-Friendly Products</a>
+            `;
+
+            document
+              .getElementById("calculator-results")
+              .classList.remove("hidden");
+            document.getElementById("calculator-results").scrollIntoView({
+              behavior: "smooth",
+            });
+          }
+        });
+
+        document.querySelectorAll(".social-btn").forEach((btn) => {
+          btn.addEventListener("click", function () {
+            const type = this.classList.contains("twitter")
+              ? "twitter"
+              : this.classList.contains("facebook")
+              ? "facebook"
+              : "instagram";
+            shareResults(type);
+          });
+        });
+
+        function shareResults(type) {
+          const carbonSaved =
+            document.getElementById("carbon-saved").textContent;
+          let url = "";
+          let text = `I saved ${carbonSaved}kg of CO2 by switching to eco-friendly products with @GreenEarth! Calculate your impact: `;
+
+          switch (type) {
+            case "twitter":
+              url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+                text
+              )}&url=${encodeURIComponent(window.location.href)}`;
+              break;
+            case "facebook":
+              url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+                window.location.href
+              )}&quote=${encodeURIComponent(text)}`;
+              break;
+            case "instagram":
+              alert("Share your results on Instagram by posting a screenshot!");
+              return;
+          }
+
+          window.open(url, "_blank", "width=600,height=400");
+        }
+      });
+    </script>
+  </body>
+</html>
